@@ -1,3 +1,11 @@
 module.exports = function cookieProblem(array) {
-  // write your code in here
+  let highestAmtOfCookies = 0;
+
+  let currentSumOfCookies = 0;
+
+  array.forEach(cookies => {
+    highestAmtOfCookies = Math.max(highestAmtOfCookies, cookies);
+    currentSumOfCookies += cookies;
+  });
+  return highestAmtOfCookies * array.length - currentSumOfCookies;
 }
